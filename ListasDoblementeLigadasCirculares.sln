@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListasDoblementeLigadasCirculares", "ListasDoblementeLigadasCirculares\ListasDoblementeLigadasCirculares.csproj", "{86699C56-3C79-4864-AC0B-1D7EE2929BB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86699C56-3C79-4864-AC0B-1D7EE2929BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86699C56-3C79-4864-AC0B-1D7EE2929BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86699C56-3C79-4864-AC0B-1D7EE2929BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86699C56-3C79-4864-AC0B-1D7EE2929BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77CA20C0-DF65-44B2-A9E3-CA64F721C243}
+	EndGlobalSection
+EndGlobal
