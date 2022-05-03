@@ -9,11 +9,14 @@ namespace ListasDoblementeLigadasCirculares
     public class Nodo
     {
         public string Valor { get; set; }
-        public Nodo Enlace { get; set; }
-        public Nodo(string valor = "", Nodo enlace = null)
+        public Nodo Ant { get; set; }
+        public Nodo Sig { get; set; }   
+        public Nodo(string valor = "", Nodo ant = null, Nodo sig = null)
         {
             Valor = valor;
-            Enlace = enlace;
+            Ant = ant;
+            Sig = sig;
+
         }
     }
 }
