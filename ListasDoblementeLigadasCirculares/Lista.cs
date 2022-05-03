@@ -15,23 +15,25 @@ namespace ListasCirculares
         public Lista()
         {
             nodoInicial = new Nodo();
-            nodoInicial.Enlace = nodoInicial;
+            nodoInicial.Sig = nodoInicial;
+            nodoInicial.Ant = nodoInicial;
         }
         public bool ValidaVacio()
         {
-            return (nodoInicial.Enlace == nodoInicial);
+            return (nodoInicial.Sig == nodoInicial.Ant);
         }
         public void Vaciar()
         {
-            nodoInicial.Enlace = nodoInicial;
+            nodoInicial.Sig = nodoInicial;
+            nodoInicial.Ant = nodoInicial;
         }
         public string RecorrerLista()
         {
             string datosLista = "";
             nodoActual = nodoInicial;
-            while (nodoActual.Enlace != nodoInicial)
+            while (nodoActual.Sig != nodoInicial)
             {
-                nodoActual = nodoActual.Enlace;
+                nodoActual = nodoActual.Sig;
                 datosLista += $"{nodoActual.Valor}\n";
             }
             return datosLista;
