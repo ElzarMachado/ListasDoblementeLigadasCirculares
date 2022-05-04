@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ListasDoblementeLigadasCirculares
-namespace ListasCirculares
+
 {
     public class Lista
     {
@@ -90,11 +90,14 @@ namespace ListasCirculares
             if (ValidaVacio() == false)
             {
                 nodoActual = Buscar(dato);
-                if (nodoActual != nodoInicial)
+                if (nodoActual != null)
                 {
-                    Nodo nodoAnterior = BuscarAnterior(dato);
-                    nodoAnterior.Enlace = nodoActual.Enlace;
-                    nodoActual.Enlace = null;
+                    Nodo nodoAnterior = nodoActual.Ant;
+                    nodoAnterior.Sig = nodoActual.Sig;
+                    nodoActual.Sig.Ant = nodoAnterior;
+                    nodoActual.Sig = null;
+                    nodoActual.Ant = null;
+                    nodoActual.Valor = null;
                 }
             }
         }
