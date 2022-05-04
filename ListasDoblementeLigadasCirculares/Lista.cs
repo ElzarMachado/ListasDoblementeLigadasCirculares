@@ -84,22 +84,6 @@ namespace ListasCirculares
             }
             return null;
         }
-        public Nodo BuscarAnterior(string dato)
-        {
-            if (ValidaVacio() == false)
-            {
-                Nodo nodoBusqueda = nodoInicial;
-                while (nodoBusqueda.Enlace != nodoInicial && nodoBusqueda.Enlace.Valor != dato)
-                {
-                    nodoBusqueda = nodoBusqueda.Enlace;
-                    if (nodoBusqueda.Enlace.Valor == dato)
-                    {
-                        return nodoBusqueda;
-                    }
-                }
-            }
-            return null;
-        }
 
         public void BorrarNodo(string dato)
         {
