@@ -41,12 +41,13 @@ namespace ListasCirculares
         public void AgregarNodo(string dato)
         {
             nodoActual = nodoInicial;
-            while (nodoActual.Enlace != nodoInicial)
+            while (nodoActual.Sig != nodoInicial)
             {
-                nodoActual = nodoActual.Enlace;
+                nodoActual = nodoActual.Sig;
             }
             Nodo nodoNuevo = new Nodo(dato, nodoInicial);
-            nodoActual.Enlace = nodoNuevo;
+            nodoActual.Sig = nodoNuevo;
+            nodoInicial.Ant = nodoNuevo;
 
         }
         public Nodo Buscar(string dato)
@@ -54,9 +55,9 @@ namespace ListasCirculares
             if (ValidaVacio() == false)
             {
                 Nodo nodoBusqueda = nodoInicial;
-                while (nodoBusqueda.Enlace != nodoInicial)
+                while (nodoBusqueda.Sig != nodoInicial)
                 {
-                    nodoBusqueda = nodoBusqueda.Enlace;
+                    nodoBusqueda = nodoBusqueda.Sig;
                     if (nodoBusqueda.Valor == dato)
                     {
                         return nodoBusqueda;
@@ -71,9 +72,9 @@ namespace ListasCirculares
             if (ValidaVacio() == false)
             {
                 Nodo nodoBusqueda = nodoInicial;
-                while (nodoBusqueda.Enlace != nodoInicial)
+                while (nodoBusqueda.Sig != nodoInicial)
                 {
-                    nodoBusqueda = nodoBusqueda.Enlace;
+                    nodoBusqueda = nodoBusqueda.Sig;
                     Indice++;
                     if (Indice == indice)
                     {
