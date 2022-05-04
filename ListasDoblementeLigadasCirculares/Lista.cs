@@ -41,7 +41,7 @@ namespace ListasDoblementeLigadasCirculares
         public void AgregarNodo(string dato)
         {
             nodoActual = nodoInicial;
-            while (nodoActual.Sig != nodoInicial)
+            while (nodoActual.Sig != null)
             {
                 nodoActual = nodoActual.Sig;
             }
